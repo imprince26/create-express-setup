@@ -20,13 +20,39 @@
   "keywords": [
     "express",
     "typescript",
+    "javascript",
     "cli",
-    "setup",
     "generator",
-    "scaffold"
+    "scaffold",
+    "boilerplate",
+    "starter",
+    "template",
+    "setup",
+    "eslint",
+    "prettier",
+    "esm",
+    "commonjs",
+    "rest-api",
+    "backend"
   ],
-  "author": "Prince Patel <patelprince.webdev@gmail.com>",
+  "author": {
+    "name": "Prince Patel",
+    "email": "patelprince.webdev@gmail.com"
+  },
   "license": "ISC",
+  "homepage": "https://github.com/imprince26/create-express-setup#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imprince26/create-express-setup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imprince26/create-express-setup/issues"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^12.1.0",

@@ -1,0 +1,68 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+tsconfig.json
+
+# Development files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+test/
+tests/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+coverage/
+.nyc_output/
+
+# Build tools
+.eslintrc*
+eslint.config.js
+.prettierrc*
+.prettierignore
+.editorconfig
+
+# Documentation (keep README.md)
+CHANGELOG.md
+CONTRIBUTING.md
+USAGE.md
+README-*.md
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+circle.yml
+appveyor.yml
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Misc
+.DS_Store
+Thumbs.db
+.env
+.env.*
+*.tsbuildinfo
+.cache/
+.temp/
+.tmp/
