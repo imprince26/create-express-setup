@@ -1,6 +1,6 @@
 {
   "name": "create-express-setup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interactive CLI for setting up Express projects with TypeScript/JavaScript",
   "main": "dist/cli.js",
   "type": "module",
