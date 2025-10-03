@@ -3,7 +3,7 @@
 import inquirer from 'inquirer';
 import chalk from 'chalk';
 import ora from 'ora';
-import { execa } from 'execa';
+import execa from 'execa';
 import fs from 'fs-extra';
 import path from 'path';
 

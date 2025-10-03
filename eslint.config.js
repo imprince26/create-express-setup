@@ -1,13 +1,16 @@
-import eslint from '@eslint/js';
-import prettier from 'eslint-config-prettier';
+const eslint = require('@eslint/js');
+const prettier = require('eslint-config-prettier');
 
-export default [
+module.exports = [
+  {
+    files: ['**/*.js'],
+  },
   eslint.configs.recommended,
   prettier,
   {
     languageOptions: {
       ecmaVersion: 2022,
-      sourceType: 'module',
+      sourceType: 'commonjs',
       globals: {
         console: 'readonly',
         process: 'readonly',
@@ -18,6 +21,9 @@ export default [
         clearTimeout: 'readonly',
         setInterval: 'readonly',
         clearInterval: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
       },
     },
     rules: {
@@ -26,6 +32,6 @@ export default [
     },
   },
   {
-    ignores: ['dist/', 'node_modules/', '*.config.js'],
+    ignores: ['dist/', 'node_modules/', 'src/'],
   },
 ];
