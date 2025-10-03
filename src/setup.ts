@@ -121,11 +121,9 @@ async function setupProject(answers: SetupAnswers) {
   // Create package.json
   await createPackageJson(projectPath, answers);
 
-  // Create tsconfig.json or jsconfig.json
+  // Create tsconfig.json
   if (answers.language === 'TypeScript') {
     await createTsConfig(projectPath, answers);
-  } else {
-    await createJsConfig(projectPath, answers);
   }
 
   // Create .env file
@@ -298,32 +296,6 @@ async function createTsConfig(projectPath: string, answers: SetupAnswers) {
 
   await fs.writeJSON(path.join(projectPath, 'tsconfig.json'), tsConfig, { spaces: 2 });
   spinner.succeed(chalk.green('tsconfig.json created'));
-}
-
-async function createJsConfig(projectPath: string, answers: SetupAnswers) {
-  const spinner = ora('Creating jsconfig.json...').start();
-
-  const rootDir = answers.useSrcDirectory ? 'src' : '.';
-
-  const jsConfig = {
-    compilerOptions: {
-      target: 'ES2022',
-      module: answers.moduleSystem === 'ESM' ? 'ES2022' : 'commonjs',
-      lib: ['ES2022'],
-      moduleResolution: 'node',
-      resolveJsonModule: true,
-      checkJs: true,
-      baseUrl: '.',
-      paths: {
-        '*': ['node_modules/*'],
-      },
-    },
-    include: [answers.useSrcDirectory ? 'src/**/*' : '**/*'],
-    exclude: ['node_modules', 'dist'],
-  };
-
-  await fs.writeJSON(path.join(projectPath, 'jsconfig.json'), jsConfig, { spaces: 2 });
-  spinner.succeed(chalk.green('jsconfig.json created'));
 }
 
 async function createEnvFile(projectPath: string) {
