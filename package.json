@@ -1,0 +1,53 @@
+{
+  "name": "create-express-setup",
+  "version": "1.0.0",
+  "description": "Interactive CLI for setting up Express projects with TypeScript/JavaScript",
+  "main": "dist/cli.js",
+  "type": "module",
+  "bin": {
+    "express-setup": "./dist/cli.js"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only --esm src/cli.ts",
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "setup": "ts-node --esm src/cli.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "cli",
+    "setup",
+    "generator",
+    "scaffold"
+  ],
+  "author": "Prince Patel <patelprince.webdev@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "execa": "^9.5.2",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^12.1.0",
+    "ora": "^8.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.9.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
